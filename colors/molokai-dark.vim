@@ -12,7 +12,7 @@ hi Character       guifg=#FFDF5F
 hi Number          guifg=#AE81FF
 hi String          guifg=#FFDF5F
 hi Conditional     guifg=#F92672               gui=bold
-hi Constant        guifg=#AE81FF               gui=bold
+hi Constant        guifg=#AE81FF
 hi Cursor          guifg=#000000 guibg=#F8F8F0
 hi iCursor         guifg=#000000 guibg=#F8F8F0
 hi Debug           guifg=#BCA3A3               gui=bold
@@ -24,7 +24,7 @@ hi DiffDelete      guifg=#960050 guibg=#1E0010
 hi DiffText                      guibg=#4C4745 gui=italic,bold
 
 hi Directory       guifg=#A6E22E               gui=bold
-hi Error           guifg=#E6DB74 guibg=#1E0010
+hi Error           guifg=#E6DB74 guibg=#FF3333
 hi ErrorMsg        guifg=#F92672 guibg=#232526 gui=bold
 hi Exception       guifg=#A6E22E               gui=bold
 hi Float           guifg=#AE81FF
@@ -50,7 +50,7 @@ hi PmenuSel                      guibg=#808080
 hi PmenuSbar                     guibg=#080808
 hi PmenuThumb      guifg=#66D9EF
 
-hi PreCondit       guifg=#A6E22E               gui=bold
+hi PreCondit       guifg=#A6E22E
 hi PreProc         guifg=#A6E22E
 hi Question        guifg=#66D9EF
 hi Repeat          guifg=#F92672               gui=bold
@@ -66,7 +66,7 @@ if has("spell")
     hi SpellLocal  guisp=#70F0F0 gui=undercurl
     hi SpellRare   guisp=#FFFFFF gui=undercurl
 endif
-hi Statement       guifg=#F92672               gui=bold
+hi Statement       guifg=#F92672
 hi StatusLine      guifg=#455354 guibg=fg
 hi StatusLineNC    guifg=#808080 guibg=#080808
 hi StorageClass    guifg=#FD971F               gui=italic
@@ -109,7 +109,7 @@ if &t_Co > 255
     hi Number          ctermfg=135
     hi String          ctermfg=221
     hi Conditional     ctermfg=197              cterm=bold
-    hi Constant        ctermfg=135              cterm=bold
+    hi Constant        ctermfg=135
     hi Cursor          ctermfg=16  ctermbg=253
     hi Debug           ctermfg=225              cterm=bold
     hi Define          ctermfg=81
@@ -121,7 +121,7 @@ if &t_Co > 255
     hi DiffText                    ctermbg=102  cterm=bold
 
     hi Directory       ctermfg=118              cterm=bold
-    hi Error           ctermfg=219 ctermbg=89
+    hi Error           ctermfg=219 ctermbg=196
     hi ErrorMsg        ctermfg=199 ctermbg=16   cterm=bold
     hi Exception       ctermfg=118              cterm=bold
     hi Float           ctermfg=135
@@ -147,7 +147,7 @@ if &t_Co > 255
     hi PmenuSbar                   ctermbg=232
     hi PmenuThumb      ctermfg=81
 
-    hi PreCondit       ctermfg=118              cterm=bold
+    hi PreCondit       ctermfg=118
     hi PreProc         ctermfg=118
     hi Question        ctermfg=81
     hi Repeat          ctermfg=197              cterm=bold
@@ -163,7 +163,7 @@ if &t_Co > 255
         hi SpellLocal              ctermbg=17
         hi SpellRare  ctermfg=none ctermbg=none cterm=reverse
     endif
-    hi Statement       ctermfg=197              cterm=bold
+    hi Statement       ctermfg=197
     hi StatusLine      ctermfg=238 ctermbg=253
     hi StatusLineNC    ctermfg=244 ctermbg=232
     hi StorageClass    ctermfg=208
@@ -190,3 +190,15 @@ if &t_Co > 255
     hi NonText         ctermfg=239
     hi SpecialKey      ctermfg=239
 end
+
+" Special cases
+
+" Show default Git colors
+hi diffAdded   ctermfg=40  cterm=none guifg=#00AF00 gui=none
+hi diffRemoved ctermfg=160 cterm=none guifg=#AF0000 gui=none
+hi diffLine    ctermfg=43  cterm=none guifg=#00D7AF gui=none
+hi link diffSubname Normal
+
+" Syntastic
+hi SyntasticErrorSign   ctermfg=197 ctermbg=235 guifg=#F92672 guibg=#232526
+hi SyntasticWarningSign ctermfg=221 ctermbg=235 guibg=#FFDF5F guibg=#232526
