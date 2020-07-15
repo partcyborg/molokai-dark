@@ -1,29 +1,42 @@
-Molokai-dark Color Scheme for Vim
-=================================
+molokai-dark theme for Vim
+==========================
 
-Molokai-dark is a darker version of the [Molokai theme by Tomas Restrepo](https://github.com/tomasr/molokai).
+Molokai-dark is a darker and re-worked version of the [Molokai theme by @tomasr](https://github.com/tomasr/molokai).
 
-Molokai-dark uses a completely black background, increasing the contrast between background and text.
+It uses a completely black background to increase the contrast between background and text.
 
-256 color terminals are fully supported with only minor differences from the GUI version.
+256-color terminals are fully supported with only minor differences from the full-color version.
 
 
 Screenshots
 -----------
-Coming soon
+Coming soon™
 
 
-Installation
-------------
+Setup
+-----
+Install it via your preferred Vim plugin installation method and configure it in your `~/.vimrc`:
+```vim
+colorscheme molokai-dark
+```
 
-Add `colorscheme molokai-dark` to your `~/.vimrc`
+Options
+-------
+Spelling errors and [Syntastic](https://github.com/vim-syntastic/syntastic/) issues will attempt to
+use colored underlines to show issues. If colored underlines are not supported then there is a
+fallback that also changes the background color of the text.
 
-### With [Pathogen](https://github.com/tpope/vim-pathogen)
-Clone this repo into your `~/.vim/bundles` directory.
+The theme assumes that if you are running a gui like `gvim` it will support colored underlines but
+if you're running `vim` in a terminal, it will not. These assumptions can be changed by setting the
+following variables in your `~/.vimrc` (defaults shown):
 
-### With [Vundle](https://github.com/VundleVim/Vundle.vim)
-Add `Plugin 'pR0Ps/molokai-dark'` to your `~/.vimrc` and run `:PluginInstall`
+```vim
+let g:molokaidark_undercolor_gui = 1
+let g:molokaidark_undercolor_cterm = 0
 
-### Manual install
-Grab `molokai-dark.vim` from the `colors` folder of this repo and save it to your `~/.vim/colors` folder.
+colorscheme molokai-dark
+```
 
+License
+-------
+Licensed under the [Mozilla Public License, version 2.0](https://www.mozilla.org/en-US/MPL/2.0)
