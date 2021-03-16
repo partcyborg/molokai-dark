@@ -7,71 +7,106 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name="molokai-dark"
+let s:ct_lightgrey = 253
+let s:gui_lightgrey = "#DADADA"
+let s:ct_grey = 246
+let s:gui_grey = "#949494"
+let s:ct_grey2 = 245
+let s:gui_grey2 = "#8A8A8A"
+let s:ct_grey3 = 102
+let s:gui_grey3 = "#878787"
+let s:ct_darkgrey = 237
+let s:gui_darkgrey = "#3A3A3A"
+let s:ct_lightblue = 81
+let s:gui_lightblue = "#5FD7FF"
+let s:ct_blue = 38
+let s:gui_blue = "#00AFD7"
+let s:ct_darkblue = 31
+let s:gui_darkblue = "#0087AF"
+let s:ct_darkpurple = 125
+let s:gui_darkpurple = "#AF005F"
+let s:ct_lightpurple = 141
+let s:gui_lightpurple = "#AF87FF"
+let s:ct_red = 197
+let s:gui_red = "#FF005F"
+let s:ct_brightred = 9
+let s:gui_brightred = "#F5163B"
+let s:ct_lightorange = 221
+let s:gui_lightorange = "#FFD75F"
+let s:ct_orange = 208
+let s:gui_orange = "#FF8700"
+let s:ct_darkorange = 202
+let s:gui_darkorange = "#FF5F00"
+let s:ct_green = 154
+let s:gui_green = "#AFFF00"
+let s:ct_white = 15
+let s:gui_white = "#FCF4DC"
+let s:ct_black = 232
+let s:gui_black = "#080808"
+let s:ct_pukegreen = 187
+let s:gui_pukegreen = "#D7D7AF"
+let s:ct_yellow = 222
+let s:gui_yellow = "#FFD787"
 
 
-hi Normal               guifg=#FFFFFF guibg=#000000 gui=NONE      ctermfg=15   ctermbg=16   cterm=NONE
-hi Cursor               guifg=bg      guibg=fg                    ctermfg=bg   ctermbg=fg
-hi iCursor              guifg=bg      guibg=fg                    ctermfg=bg   ctermbg=fg
-hi VisualNOS                          guibg=#403D3D                            ctermbg=238
-hi Visual                             guibg=#403D3D                            ctermbg=238
-hi CursorLine                         guibg=#1C1C1C gui=NONE                   ctermbg=234  cterm=NONE
-hi CursorColumn                       guibg=#1C1C1C                            ctermbg=234
+exe "hi Normal          guifg=" . s:gui_white . "       ctermfg=" . s:ct_white . " ctermbg=" . s:ct_black . " guibg=" . s:gui_black . " gui=NONE cterm=NONE"
+hi Cursor       guifg=bg      guibg=fg     ctermfg=bg           ctermbg=fg
+hi iCursor      guifg=bg      guibg=fg     ctermfg=bg           ctermbg=fg
+hi VisualNOS    guibg=#3C3C3C ctermbg=238
+hi Visual       guibg=#3C3C3C ctermbg=238
+hi CursorLine   guibg=#171717 gui=NONE     ctermbg=234          cterm=NONE
+hi CursorColumn guibg=#171717 ctermbg=234
 
-hi Constant             guifg=#AE81FF                             ctermfg=141
- hi String              guifg=#FFDF5F                             ctermfg=221
- hi Character           guifg=#FFDF5F                             ctermfg=221
- hi Number              guifg=#AE81FF                             ctermfg=141
- hi Boolean             guifg=#AE81FF                             ctermfg=141
- hi Float               guifg=#AE81FF                             ctermfg=141
+exe "hi Constant        guifg=" . s:gui_lightpurple . " ctermfg=" . s:ct_lightpurple
+  exe "hi String         guifg=" . s:gui_darkpurple . " ctermfg=" . s:ct_darkpurple
+  exe "hi Character      guifg=" . s:gui_lightorange . " ctermfg=" . s:ct_lightorange
+  exe "hi Number         guifg=" . s:gui_lightpurple . " ctermfg=" . s:ct_lightpurple
+  exe "hi Boolean        guifg=" . s:gui_lightpurple . " ctermfg=" . s:ct_lightpurple
+  exe "hi Float          guifg=" . s:gui_lightpurple . " ctermfg=" . s:ct_lightpurple
 
-hi Identifier           guifg=#FD971F               gui=NONE      ctermfg=208               cterm=NONE
- hi Function            guifg=#A6E22E                             ctermfg=154
+exe "hi Identifier      guifg=" . s:gui_orange . "      ctermfg=" . s:ct_orange . "      gui=NONE cterm=NONE"
+  exe "hi Function       guifg=" . s:gui_blue . "       ctermfg=" . s:ct_blue
 
-hi Statement            guifg=#F92672                             ctermfg=197
- hi Conditional         guifg=#F92672               gui=bold      ctermfg=197               cterm=bold
- hi Repeat              guifg=#F92672               gui=bold      ctermfg=197               cterm=bold
- hi Label               guifg=#F92672                             ctermfg=197
- hi Operator            guifg=#F92672                             ctermfg=197
- hi Keyword             guifg=#F92672               gui=bold      ctermfg=197               cterm=bold
- hi Exception           guifg=#F92672               gui=bold      ctermfg=197               cterm=bold
+exe "hi Statement       guifg=" . s:gui_red . "         ctermfg=" . s:ct_red
+  exe "hi Conditional    guifg=" . s:gui_red . "         ctermfg=" . s:ct_red . "         gui=bold cterm=bold"
+  exe "hi Repeat         guifg=" . s:gui_red . "         ctermfg=" . s:ct_red . "         gui=bold  cterm=bold"
+  exe "hi Label          guifg=" . s:gui_red . "         ctermfg=" . s:ct_red
+  exe "hi Operator       guifg=" . s:gui_red . "         ctermfg=" . s:ct_red
+  exe "hi Keyword        guifg=" . s:gui_orange . "      ctermfg=" . s:ct_orange . "         gui=bold cterm=bold"
+  exe "hi Exception      guifg=" . s:gui_red . "         ctermfg=" . s:ct_red . "         gui=bold  cterm=bold"
 
-hi PreProc              guifg=#A6E22E                             ctermfg=154
- hi Include             guifg=#A6E22E                             ctermfg=154
- hi Define              guifg=#66D9EF                             ctermfg=81
- hi Macro               guifg=#66D9EF                             ctermfg=81
- hi PreCondit           guifg=#A6E22E                             ctermfg=154
+exe "hi PreProc         guifg=" . s:gui_green . "       ctermfg=" . s:ct_green
+  exe "hi Include        guifg=" . s:gui_green . "       ctermfg=" . s:ct_green
+  exe "hi Define         guifg=" . s:gui_lightblue . "   ctermfg=" . s:ct_lightblue
+  exe "hi Macro          guifg=" . s:gui_lightblue . "   ctermfg=" . s:ct_lightblue
+  exe "hi PreCondit      guifg=" . s:gui_green . "       ctermfg=" . s:ct_green
 
-hi Type                 guifg=#66D9EF               gui=NONE      ctermfg=81                cterm=NONE
- hi StorageClass        guifg=#FD971F                             ctermfg=208
- hi Structure           guifg=#66D9EF                             ctermfg=81
- hi Typedef             guifg=#66D9EF                             ctermfg=81
+exe "hi Type            guifg=" . s:gui_lightblue . "   ctermfg=" . s:ct_lightblue . "   gui=NONE cterm=NONE"
+  exe "hi StorageClass   guifg=" . s:gui_orange . "      ctermfg=" . s:ct_orange
+  exe "hi Structure      guifg=" . s:gui_lightblue . "   ctermfg=" . s:ct_lightblue
+  exe "hi Typedef        guifg=" . s:gui_lightblue . "   ctermfg=" . s:ct_lightblue
 
-hi Special              guifg=#66D9EF                             ctermfg=81
- hi SpecialChar         guifg=#F92672               gui=bold      ctermfg=197               cterm=bold
- hi Tag                 guifg=#F92672                             ctermfg=197
- hi Delimiter           guifg=#8F8F8F                             ctermfg=246
- hi SpecialComment      guifg=#7E8E91               gui=bold      ctermfg=245               cterm=bold
- hi Debug               guifg=#BCA3A3               gui=bold      ctermfg=225               cterm=bold
+exe "hi Special         guifg=" . s:gui_lightblue . "   ctermfg=" . s:ct_lightblue
+  exe "hi SpecialChar    guifg=" . s:gui_red . "         ctermfg=" . s:ct_red . "         gui=bold cterm=bold"
+  exe "hi Tag            guifg=" . s:gui_red . "           ctermfg=" . s:ct_red
+  exe "hi Delimiter      guifg=" . s:gui_grey . "        ctermfg=" . s:ct_grey
+  exe "hi SpecialComment guifg=" . s:gui_grey2 . "       ctermfg=" . s:ct_grey2 . "       gui=bold cterm=bold"
+  exe "hi Debug          guifg=" . s:gui_lightpurple . " ctermfg=" . s:ct_lightpurple . " gui=bold cterm=bold"
 
 "Bold and underline matching parens instead of highlighting them.
 "This makes it easier to tell the difference between the cursor and the matching paren.
-hi MatchParen           guibg=NONE                  gui=underline,bold         ctermbg=NONE cterm=underline,bold
-
-hi Comment              guifg=#7E8E91                             ctermfg=102
-hi Todo                 guifg=fg      guibg=bg      gui=bold      ctermfg=fg   ctermbg=bg   cterm=bold
-hi Underlined           guifg=NONE                  gui=underline ctermfg=NONE              cterm=underline
-
-hi Directory            guifg=#A6E22E               gui=bold      ctermfg=154               cterm=bold
-
-hi Search               guifg=bg      guibg=#FFE792 gui=NONE      ctermfg=bg   ctermbg=222  cterm=NONE
-hi IncSearch            guifg=bg      guibg=#C4BE89 gui=NONE      ctermfg=bg   ctermbg=187  cterm=NONE
-
-hi Folded               guifg=#465457 guibg=bg                    ctermfg=67   ctermbg=bg
-hi FoldColumn           guifg=#465457 guibg=bg                    ctermfg=67   ctermbg=bg
-
-hi NonText              guifg=#465457                             ctermfg=239
-hi SpecialKey           guifg=#465457                             ctermfg=239
+hi MatchParen   guibg=NONE    ctermbg=NONE cterm=underline,bold gui=underline,bold
+exe "hi Comment    guifg=" . s:gui_grey3 . "    ctermfg=" . s:ct_grey3
+hi Todo         guifg=fg      guibg=bg     ctermfg=fg           ctermbg=bg cterm=bold gui=bold
+hi Underlined   guifg=NONE    ctermfg=NONE cterm=underline      gui=underline
+exe "hi Directory  guifg=" . s:gui_green . "    ctermfg=" . s:ct_green . "    cterm=bold           gui=bold"
+exe "hi Search     guifg=bg             guibg=" . s:gui_yellow . "    ctermfg=bg           ctermbg=" . s:ct_yellow . "    cterm=NONE gui=NONE"
+exe "hi IncSearch  guifg=bg             guibg=" . s:gui_pukegreen . " ctermfg=bg           ctermbg=" . s:ct_pukegreen . " cterm=NONE gui=NONE"
+exe "hi Folded     guifg=#B7B7B7        guibg=" . s:gui_black . "     ctermfg=250          ctermbg=" . s:ct_black
+exe "hi FoldColumn guifg=" . s:gui_darkblue . " ctermfg=" . s:ct_darkblue . " ctermbg=NONE         guibg=NONE"
+hi ColorColumn  ctermbg=NONE  guibg=NONE
+exe "hi NonText    guifg=" . s:gui_darkgrey . " ctermfg=" . s:ct_darkgrey
+exe "hi SpecialKey guifg=" . s:gui_darkgrey . " ctermfg=" . s:ct_darkgrey
 
 " UI - tab line
 hi TabLineFill          guifg=#808080 guibg=#1B1D1E               ctermfg=244  ctermbg=16
