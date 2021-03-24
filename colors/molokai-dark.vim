@@ -27,6 +27,8 @@ let s:ct_darkpurple = 125
 let s:gui_darkpurple = "#AF005F"
 let s:ct_lightpurple = 141
 let s:gui_lightpurple = "#AF87FF"
+let s:ct_lightred = 1
+let s:gui_lightred = "#F24840"
 let s:ct_red = 197
 let s:gui_red = "#FF005F"
 let s:ct_brightred = 9
@@ -39,6 +41,7 @@ let s:ct_darkorange = 202
 let s:gui_darkorange = "#FF5F00"
 let s:ct_green = 154
 let s:gui_green = "#AFFF00"
+let s:gui_darkgreen = "#0EB48D"
 let s:ct_white = 15
 let s:gui_white = "#FCF4DC"
 let s:ct_black = 232
@@ -56,6 +59,8 @@ hi VisualNOS    guibg=#3C3C3C ctermbg=238
 hi Visual       guibg=#3C3C3C ctermbg=238
 hi CursorLine   guibg=#171717 gui=NONE     ctermbg=234          cterm=NONE
 hi CursorColumn guibg=#171717 ctermbg=234
+hi FoldColumn   guibg=NONE    ctermbg=NONE
+hi ColorColumn  guibg=NONE    ctermbg=NONE
 
 exe "hi Constant        guifg=" . s:gui_lightpurple . " ctermfg=" . s:ct_lightpurple
   exe "hi String         guifg=" . s:gui_darkpurple . " ctermfg=" . s:ct_darkpurple
@@ -95,18 +100,16 @@ exe "hi Special         guifg=" . s:gui_lightblue . "   ctermfg=" . s:ct_lightbl
 
 "Bold and underline matching parens instead of highlighting them.
 "This makes it easier to tell the difference between the cursor and the matching paren.
-hi MatchParen   guibg=NONE    ctermbg=NONE cterm=underline,bold gui=underline,bold
 exe "hi Comment    guifg=" . s:gui_grey3 . "    ctermfg=" . s:ct_grey3
-hi Todo         guifg=fg      guibg=bg     ctermfg=fg           ctermbg=bg cterm=bold gui=bold
-hi Underlined   guifg=NONE    ctermfg=NONE cterm=underline      gui=underline
 exe "hi Directory  guifg=" . s:gui_green . "    ctermfg=" . s:ct_green . "    cterm=bold           gui=bold"
-exe "hi Search     guifg=bg             guibg=" . s:gui_yellow . "    ctermfg=bg           ctermbg=" . s:ct_yellow . "    cterm=NONE gui=NONE"
+exe "hi NonText    guifg=" . s:gui_darkgrey . " ctermfg=" . s:ct_darkgrey
 exe "hi IncSearch  guifg=bg             guibg=" . s:gui_pukegreen . " ctermfg=bg           ctermbg=" . s:ct_pukegreen . " cterm=NONE gui=NONE"
 exe "hi Folded     guifg=#B7B7B7        guibg=" . s:gui_black . "     ctermfg=250          ctermbg=" . s:ct_black
-exe "hi FoldColumn guifg=" . s:gui_darkblue . " ctermfg=" . s:ct_darkblue . " ctermbg=NONE         guibg=NONE"
-hi ColorColumn  ctermbg=NONE  guibg=NONE
-exe "hi NonText    guifg=" . s:gui_darkgrey . " ctermfg=" . s:ct_darkgrey
 exe "hi SpecialKey guifg=" . s:gui_darkgrey . " ctermfg=" . s:ct_darkgrey
+hi MatchParen   guibg=NONE    ctermbg=NONE cterm=underline,bold gui=underline,bold
+hi Todo         guifg=fg      guibg=bg     ctermfg=fg           ctermbg=bg cterm=bold gui=bold
+hi Underlined   guifg=NONE    ctermfg=NONE cterm=underline      gui=underline
+hi Search       guifg=NONE    ctermfg=NONE guibg=#232526        ctermbg=222
 
 " UI - tab line
 hi TabLineFill          guifg=#808080 guibg=#1B1D1E               ctermfg=244  ctermbg=16
@@ -118,7 +121,6 @@ hi LineNr               guifg=#465457 guibg=#232526               ctermfg=239  c
 hi CursorLineNr         guifg=#FD971F guibg=#1C1C1C gui=NONE      ctermfg=208  ctermbg=234  cterm=NONE
 hi SignColumn                         guibg=#232526                            ctermbg=235
 hi VertSplit            guifg=#808080 guibg=#080808 gui=bold      ctermfg=244  ctermbg=232  cterm=bold
-hi ColorColumn                        guibg=#232526                            ctermbg=236
 
 " UI - menus
 hi Pmenu                guifg=#66D9EF guibg=bg                    ctermfg=81   ctermbg=bg
