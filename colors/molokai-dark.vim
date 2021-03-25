@@ -41,6 +41,7 @@ let s:ct_darkorange = 202
 let s:gui_darkorange = "#FF5F00"
 let s:ct_green = 154
 let s:gui_green = "#AFFF00"
+let s:ct_darkgreen = 14
 let s:gui_darkgreen = "#0EB48D"
 let s:ct_white = 15
 let s:gui_white = "#FCF4DC"
@@ -86,26 +87,25 @@ exe "hi PreProc         guifg=" . s:gui_green . "       ctermfg=" . s:ct_green
   exe "hi Macro          guifg=" . s:gui_lightblue . "   ctermfg=" . s:ct_lightblue
   exe "hi PreCondit      guifg=" . s:gui_green . "       ctermfg=" . s:ct_green
 
-exe "hi Type            guifg=" . s:gui_lightblue . "   ctermfg=" . s:ct_lightblue . "   gui=NONE cterm=NONE"
+exe "hi Type            guifg=" . s:gui_lightpurple . "   ctermfg=" . s:ct_lightpurple . "   gui=NONE cterm=NONE"
   exe "hi StorageClass   guifg=" . s:gui_orange . "      ctermfg=" . s:ct_orange
   exe "hi Structure      guifg=" . s:gui_lightblue . "   ctermfg=" . s:ct_lightblue
   exe "hi Typedef        guifg=" . s:gui_lightblue . "   ctermfg=" . s:ct_lightblue
 
-exe "hi Special         guifg=" . s:gui_lightblue . "   ctermfg=" . s:ct_lightblue
+exe "hi Special         guifg=" . s:gui_brightred . "   ctermfg=" . s:ct_brightred
   exe "hi SpecialChar    guifg=" . s:gui_red . "         ctermfg=" . s:ct_red . "         gui=bold cterm=bold"
   exe "hi Tag            guifg=" . s:gui_red . "           ctermfg=" . s:ct_red
   exe "hi Delimiter      guifg=" . s:gui_grey . "        ctermfg=" . s:ct_grey
   exe "hi SpecialComment guifg=" . s:gui_grey2 . "       ctermfg=" . s:ct_grey2 . "       gui=bold cterm=bold"
   exe "hi Debug          guifg=" . s:gui_lightpurple . " ctermfg=" . s:ct_lightpurple . " gui=bold cterm=bold"
 
-"Bold and underline matching parens instead of highlighting them.
-"This makes it easier to tell the difference between the cursor and the matching paren.
 exe "hi Comment    guifg=" . s:gui_grey3 . "    ctermfg=" . s:ct_grey3
 exe "hi Directory  guifg=" . s:gui_green . "    ctermfg=" . s:ct_green . "    cterm=bold           gui=bold"
 exe "hi NonText    guifg=" . s:gui_darkgrey . " ctermfg=" . s:ct_darkgrey
 exe "hi IncSearch  guifg=bg             guibg=" . s:gui_pukegreen . " ctermfg=bg           ctermbg=" . s:ct_pukegreen . " cterm=NONE gui=NONE"
 exe "hi Folded     guifg=#B7B7B7        guibg=" . s:gui_black . "     ctermfg=250          ctermbg=" . s:ct_black
 exe "hi SpecialKey guifg=" . s:gui_darkgrey . " ctermfg=" . s:ct_darkgrey
+hi link vimSynType Function
 hi MatchParen   guibg=NONE    ctermbg=NONE cterm=underline,bold gui=underline,bold
 hi Todo         guifg=fg      guibg=bg     ctermfg=fg           ctermbg=bg cterm=bold gui=bold
 hi Underlined   guifg=NONE    ctermfg=NONE cterm=underline      gui=underline
