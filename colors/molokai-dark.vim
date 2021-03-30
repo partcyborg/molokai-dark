@@ -31,7 +31,7 @@ let s:ct_lightred = 1
 let s:gui_lightred = "#F24840"
 let s:ct_red = 197
 let s:gui_red = "#FF005F"
-let s:ct_brightred = 9
+let s:ct_brightred = 203
 let s:gui_brightred = "#F5163B"
 let s:ct_lightorange = 221
 let s:gui_lightorange = "#FFD75F"
@@ -39,6 +39,8 @@ let s:ct_orange = 208
 let s:gui_orange = "#FF8700"
 let s:ct_darkorange = 202
 let s:gui_darkorange = "#FF5F00"
+let s:ct_khaki = 11
+let s:gui_khaki = "#C4BE89"
 let s:ct_green = 154
 let s:gui_green = "#AFFF00"
 let s:ct_darkgreen = 14
@@ -47,8 +49,8 @@ let s:ct_white = 15
 let s:gui_white = "#FCF4DC"
 let s:ct_black = 232
 let s:gui_black = "#080808"
-let s:ct_pukegreen = 187
-let s:gui_pukegreen = "#D7D7AF"
+let s:ct_lightgreen = 187
+let s:gui_lightgreen = "#D7D7AF"
 let s:ct_yellow = 222
 let s:gui_yellow = "#FFD787"
 
@@ -99,11 +101,11 @@ exe "hi Special         guifg=" . s:gui_brightred . "   ctermfg=" . s:ct_brightr
   exe "hi SpecialComment guifg=" . s:gui_grey2 . "       ctermfg=" . s:ct_grey2 . "       gui=bold cterm=bold"
   exe "hi Debug          guifg=" . s:gui_lightpurple . " ctermfg=" . s:ct_lightpurple . " gui=bold cterm=bold"
 
-exe "hi Comment    guifg=" . s:gui_grey3 . "    ctermfg=" . s:ct_grey3
-exe "hi Directory  guifg=" . s:gui_green . "    ctermfg=" . s:ct_green . "    cterm=bold           gui=bold"
-exe "hi NonText    guifg=" . s:gui_darkgrey . " ctermfg=" . s:ct_darkgrey
-exe "hi IncSearch  guifg=bg             guibg=" . s:gui_pukegreen . " ctermfg=bg           ctermbg=" . s:ct_pukegreen . " cterm=NONE gui=NONE"
-exe "hi Folded     guifg=#B7B7B7        guibg=" . s:gui_black . "     ctermfg=250          ctermbg=" . s:ct_black
+exe "hi Comment    guifg=" . s:gui_grey3 . "     ctermfg=" . s:ct_grey3
+exe "hi Directory  guifg=" . s:gui_green . "     ctermfg=" . s:ct_green . "    cterm=bold           gui=bold"
+exe "hi NonText    guifg=" . s:gui_darkgrey . "  ctermfg=" . s:ct_darkgrey
+exe "hi IncSearch  guibg=" . s:gui_lightgreen . " ctermbg=" . s:ct_lightgreen . " cterm=NONE gui=NONE"
+exe "hi Folded     guifg=" . s:gui_darkgreen . " guibg=" . s:gui_black . " ctermfg=" . s:ct_darkgreen . " ctermbg=" . s:ct_black
 exe "hi SpecialKey guifg=" . s:gui_darkgrey . " ctermfg=" . s:ct_darkgrey
 hi link vimSynType Function
 hi MatchParen   guibg=NONE    ctermbg=NONE cterm=underline,bold gui=underline,bold
