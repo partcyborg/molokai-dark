@@ -101,15 +101,16 @@ exe "hi Special         guifg=" . s:gui_brightred . "   ctermfg=" . s:ct_brightr
   exe "hi SpecialComment guifg=" . s:gui_grey2 . "       ctermfg=" . s:ct_grey2 . "       gui=bold cterm=bold"
   exe "hi Debug          guifg=" . s:gui_lightpurple . " ctermfg=" . s:ct_lightpurple . " gui=bold cterm=bold"
 
-exe "hi Comment    guifg=" . s:gui_grey3 . "     ctermfg=" . s:ct_grey3
-exe "hi Directory  guifg=" . s:gui_green . "     ctermfg=" . s:ct_green . "    cterm=bold           gui=bold"
-exe "hi NonText    guifg=" . s:gui_darkgrey . "  ctermfg=" . s:ct_darkgrey
+exe "hi Comment    guifg=" . s:gui_grey3 . "      ctermfg=" . s:ct_grey3
+exe "hi Directory  guifg=" . s:gui_green . "      ctermfg=" . s:ct_green . "      cterm=bold           gui=bold"
+exe "hi NonText    guifg=" . s:gui_darkgrey . "   ctermfg=" . s:ct_darkgrey
 exe "hi IncSearch  guibg=" . s:gui_lightgreen . " ctermbg=" . s:ct_lightgreen . " cterm=NONE gui=NONE"
-exe "hi Folded     guifg=" . s:gui_darkgreen . " guibg=" . s:gui_black . " ctermfg=" . s:ct_darkgreen . " ctermbg=" . s:ct_black
-exe "hi SpecialKey guifg=" . s:gui_darkgrey . " ctermfg=" . s:ct_darkgrey
+exe "hi Folded     guifg=" . s:gui_darkgreen . "  guibg=" .   s:gui_black . "     ctermfg=" . s:ct_darkgreen . " ctermbg=" . s:ct_black
+exe "hi SpecialKey guifg=" . s:gui_darkgrey . "   ctermfg=" . s:ct_darkgrey
 hi link vimSynType Function
+hi clear Todo 
+hi link Todo Comment
 hi MatchParen   guibg=NONE    ctermbg=NONE cterm=underline,bold gui=underline,bold
-hi Todo         guifg=fg      guibg=bg     ctermfg=fg           ctermbg=bg cterm=bold gui=bold
 hi Underlined   guifg=NONE    ctermfg=NONE cterm=underline      gui=underline
 hi Search       guifg=NONE    ctermfg=NONE guibg=#232526        ctermbg=222
 
