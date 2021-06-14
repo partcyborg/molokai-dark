@@ -55,15 +55,15 @@ let s:ct_yellow = 222
 let s:gui_yellow = "#FFD787"
 
 
-exe "hi Normal          guifg=" . s:gui_white . "       ctermfg=" . s:ct_white . " ctermbg=" . s:ct_black . " guibg=" . s:gui_black . " gui=NONE cterm=NONE"
-hi Cursor       guifg=bg      guibg=fg     ctermfg=bg           ctermbg=fg
-hi iCursor      guifg=bg      guibg=fg     ctermfg=bg           ctermbg=fg
-hi VisualNOS    guibg=#3C3C3C ctermbg=238
-hi Visual       guibg=#3C3C3C ctermbg=238
-hi CursorLine   guibg=#171717 gui=NONE     ctermbg=234          cterm=NONE
-hi CursorColumn guibg=#171717 ctermbg=234
-hi FoldColumn   guibg=NONE    ctermbg=NONE
-hi ColorColumn  guibg=NONE    ctermbg=NONE
+exe "hi Normal       guifg=" . s:gui_white    . " ctermfg=" . s:ct_white    . " ctermbg=" . s:ct_black . " guibg=" . s:gui_black . " gui=NONE cterm=NONE"
+exe "hi CursorLine   guibg=" . s:gui_black    . " ctermbg=" . s:ct_black                                                         . " gui=NONE cterm=NONE"
+exe "hi VisualNOS    guibg=" . s:gui_darkgrey . " ctermbg=" . s:ct_darkgrey
+exe "hi Visual       guibg=" . s:gui_darkgrey . " ctermbg=" . s:ct_darkgrey
+exe "hi CursorColumn guibg=" . s:gui_black    . " ctermbg=" . s:ct_black
+hi Cursor       guifg=bg     guibg=fg       ctermfg=bg       ctermbg=fg
+hi iCursor      guifg=bg     guibg=fg       ctermfg=bg       ctermbg=fg
+hi FoldColumn   guibg=NONE   ctermbg=NONE
+hi ColorColumn  guibg=NONE   ctermbg=NONE
 
 exe "hi Constant        guifg=" . s:gui_lightpurple . " ctermfg=" . s:ct_lightpurple
   exe "hi String         guifg=" . s:gui_darkpurple . " ctermfg=" . s:ct_darkpurple
@@ -122,7 +122,7 @@ hi TabLineSel           guifg=#808080 guibg=#5F6061 gui=bold      ctermfg=244  c
 " UI - window
 hi LineNr               guifg=#465457 guibg=#232526               ctermfg=239  ctermbg=235
 hi CursorLineNr         guifg=#FD971F guibg=#1C1C1C gui=NONE      ctermfg=208  ctermbg=234  cterm=NONE
-hi SignColumn                         guibg=#232526                            ctermbg=235
+hi SignColumn                         guibg=NONE                               ctermbg=NONE
 hi VertSplit            guifg=#808080 guibg=#080808 gui=bold      ctermfg=244  ctermbg=232  cterm=bold
 
 " UI - menus
