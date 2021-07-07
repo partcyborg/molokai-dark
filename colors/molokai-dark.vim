@@ -107,12 +107,20 @@ exe "hi NonText    guifg=" . s:gui_darkgrey . "   ctermfg=" . s:ct_darkgrey
 exe "hi IncSearch  guibg=" . s:gui_lightgreen . " ctermbg=" . s:ct_lightgreen . " cterm=NONE gui=NONE"
 exe "hi Folded     guifg=" . s:gui_darkgreen . "  guibg=" .   s:gui_black . "     ctermfg=" . s:ct_darkgreen . " ctermbg=" . s:ct_black
 exe "hi SpecialKey guifg=" . s:gui_darkgrey . "   ctermfg=" . s:ct_darkgrey
+
 hi link vimSynType Function
 hi clear Todo 
 hi link Todo Comment
 hi MatchParen   guibg=NONE    ctermbg=NONE cterm=underline,bold gui=underline,bold
 hi Underlined   guifg=NONE    ctermfg=NONE cterm=underline      gui=underline
 hi Search       guifg=NONE    ctermfg=NONE guibg=#232526        ctermbg=222
+
+" UI - menus
+exe "hi Pmenu guifg=" . s:gui_blue . " guibg=bg ctermfg=" . s:ct_blue . " ctermbg=bg"
+exe "hi PmenuSel guifg=bg guibg=" . s:gui_grey3 . " ctermfg=bg ctermbg=" . s:ct_grey3
+exe "hi PmenuSbar guibg=" . s:gui_black . "ctermbg=" . s:ct_black
+exe "hi PmenuThumb guifg=" . s:gui_lightblue . " ctermfg=" . s:ct_lightblue
+exe "hi WildMenu guifg=" . s:gui_lightblue . " guibg=bg ctermfg=" . s:ct_lightblue . "ctermbg=bg"
 
 " UI - tab line
 hi TabLineFill          guifg=#808080 guibg=#1B1D1E               ctermfg=244  ctermbg=16
@@ -124,13 +132,6 @@ hi LineNr               guifg=#465457 guibg=#232526               ctermfg=239  c
 hi CursorLineNr         guifg=#FD971F guibg=#1C1C1C gui=NONE      ctermfg=208  ctermbg=234  cterm=NONE
 hi SignColumn                         guibg=NONE                               ctermbg=NONE
 hi VertSplit            guifg=#808080 guibg=#080808 gui=bold      ctermfg=244  ctermbg=232  cterm=bold
-
-" UI - menus
-hi Pmenu                guifg=#66D9EF guibg=bg                    ctermfg=81   ctermbg=bg
-hi PmenuSel             guifg=bg      guibg=#808080               ctermfg=bg   ctermbg=244
-hi PmenuSbar                          guibg=#080808                            ctermbg=232
-hi PmenuThumb           guifg=#66D9EF                             ctermfg=81
-hi WildMenu             guifg=#66D9EF guibg=bg                    ctermfg=81   ctermbg=bg
 
 " UI - status line
 hi ModeMsg              guifg=#E6DB74                             ctermfg=229
