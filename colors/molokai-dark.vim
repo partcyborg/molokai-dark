@@ -47,13 +47,15 @@ let s:ct_darkgreen = 14
 let s:gui_darkgreen = "#0EB48D"
 let s:ct_white = 15
 let s:gui_white = "#FCF4DC"
+let s:gui_darkwhite = "#979284"
 let s:ct_black = 232
 let s:gui_black = "#080808"
 let s:ct_lightgreen = 187
 let s:gui_lightgreen = "#D7D7AF"
-let s:ct_yellow = 222
-let s:gui_yellow = "#FFD787"
-
+let s:ct_lightyellow = 222
+let s:gui_lightyellow = "#FFD787"
+let s:gui_yellow = "#CD972D"
+let s:ct_yellow = 3
 
 exe "hi Normal       guifg=" . s:gui_white    . " ctermfg=" . s:ct_white    . " ctermbg=" . s:ct_black . " guibg=" . s:gui_black . " gui=NONE cterm=NONE"
 exe "hi CursorLine   guibg=" . s:gui_black    . " ctermbg=" . s:ct_black                                                         . " gui=NONE cterm=NONE"
@@ -121,6 +123,14 @@ exe "hi PmenuSel guifg=bg guibg=" . s:gui_grey3 . " ctermfg=bg ctermbg=" . s:ct_
 exe "hi PmenuSbar guibg=" . s:gui_black . "ctermbg=" . s:ct_black
 exe "hi PmenuThumb guifg=" . s:gui_lightblue . " ctermfg=" . s:ct_lightblue
 exe "hi WildMenu guifg=" . s:gui_lightblue . " guibg=bg ctermfg=" . s:ct_lightblue . "ctermbg=bg"
+
+" coc-nvim
+exe 'hi CocErrorHighlight guifg=' . s:gui_darkwhite . ' cterm=underline gui=underline'
+exe 'hi CocErrorSign guifg=' . s:gui_red . ' ctermfg=' . s:ct_red
+exe "hi CocWarningSign guifg=" . s:gui_orange . " ctermfg=" . s:ct_orange
+exe "hi CocInfoSign guifg=" . s:gui_yellow . " ctermfg=" . s:ct_yellow
+exe "hi CocHintSign guifg=" . s:gui_blue . " ctermfg=" . s:ct_blue
+exe "hi CocCodeLens guifg=" . s:gui_grey . " ctermfg=" . s:ct_grey
 
 " UI - tab line
 hi TabLineFill          guifg=#808080 guibg=#1B1D1E               ctermfg=244  ctermbg=16
