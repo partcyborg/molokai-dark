@@ -85,52 +85,60 @@ exe "hi Statement       guifg=" . s:gui_red . "         ctermfg=" . s:ct_red
   exe "hi Keyword        guifg=" . s:gui_orange . "      ctermfg=" . s:ct_orange . "         gui=bold cterm=bold"
   exe "hi Exception      guifg=" . s:gui_red . "         ctermfg=" . s:ct_red . "         gui=bold  cterm=bold"
 
-exe "hi PreProc         guifg=" . s:gui_green . "       ctermfg=" . s:ct_green
-  exe "hi Include        guifg=" . s:gui_green . "       ctermfg=" . s:ct_green
-  exe "hi Define         guifg=" . s:gui_lightblue . "   ctermfg=" . s:ct_lightblue
-  exe "hi Macro          guifg=" . s:gui_lightblue . "   ctermfg=" . s:ct_lightblue
-  exe "hi PreCondit      guifg=" . s:gui_green . "       ctermfg=" . s:ct_green
+exe "hi PreProc        guifg=" . s:gui_green     . " ctermfg=" . s:ct_green
+exe "hi Include        guifg=" . s:gui_green     . " ctermfg=" . s:ct_green
+exe "hi Define         guifg=" . s:gui_lightblue . " ctermfg=" . s:ct_lightblue
+exe "hi Macro          guifg=" . s:gui_lightblue . " ctermfg=" . s:ct_lightblue
+exe "hi PreCondit      guifg=" . s:gui_green     . " ctermfg=" . s:ct_green
 
 exe "hi Type            guifg=" . s:gui_lightpurple . "   ctermfg=" . s:ct_lightpurple . "   gui=NONE cterm=NONE"
   exe "hi StorageClass   guifg=" . s:gui_orange . "      ctermfg=" . s:ct_orange
   exe "hi Structure      guifg=" . s:gui_lightblue . "   ctermfg=" . s:ct_lightblue
   exe "hi Typedef        guifg=" . s:gui_lightblue . "   ctermfg=" . s:ct_lightblue
 
-exe "hi Special         guifg=" . s:gui_brightred . "   ctermfg=" . s:ct_brightred
-  exe "hi SpecialChar    guifg=" . s:gui_red . "         ctermfg=" . s:ct_red . "         gui=bold cterm=bold"
-  exe "hi Tag            guifg=" . s:gui_red . "           ctermfg=" . s:ct_red
-  exe "hi Delimiter      guifg=" . s:gui_grey . "        ctermfg=" . s:ct_grey
-  exe "hi SpecialComment guifg=" . s:gui_grey2 . "       ctermfg=" . s:ct_grey2 . "       gui=bold cterm=bold"
-  exe "hi Debug          guifg=" . s:gui_lightpurple . " ctermfg=" . s:ct_lightpurple . " gui=bold cterm=bold"
+exe "hi Special        guifg=" . s:gui_brightred   . " ctermfg=" . s:ct_brightred
+exe "hi SpecialChar    guifg=" . s:gui_red         . " ctermfg=" . s:ct_red         . " gui=bold cterm=bold"
+exe "hi Tag            guifg=" . s:gui_red         . " ctermfg=" . s:ct_red
+exe "hi Delimiter      guifg=" . s:gui_grey        . " ctermfg=" . s:ct_grey
+exe "hi SpecialComment guifg=" . s:gui_grey2       . " ctermfg=" . s:ct_grey2       . " gui=bold cterm=bold"
+exe "hi Debug          guifg=" . s:gui_lightpurple . " ctermfg=" . s:ct_lightpurple . " gui=bold cterm=bold"
 
-exe "hi Comment    guifg=" . s:gui_grey3 . "      ctermfg=" . s:ct_grey3
-exe "hi Directory  guifg=" . s:gui_green . "      ctermfg=" . s:ct_green . "      cterm=bold           gui=bold"
-exe "hi NonText    guifg=" . s:gui_darkgrey . "   ctermfg=" . s:ct_darkgrey
+exe "hi Comment    guifg=" . s:gui_grey3      . " ctermfg=" . s:ct_grey3
+exe "hi Directory  guifg=" . s:gui_green      . " ctermfg=" . s:ct_green      . " cterm=bold gui=bold"
+exe "hi NonText    guifg=" . s:gui_darkgrey   . " ctermfg=" . s:ct_darkgrey
 exe "hi IncSearch  guibg=" . s:gui_lightgreen . " ctermbg=" . s:ct_lightgreen . " cterm=NONE gui=NONE"
-exe "hi Folded     guifg=" . s:gui_darkgreen . "  guibg=" .   s:gui_black . "     ctermfg=" . s:ct_darkgreen . " ctermbg=" . s:ct_black
-exe "hi SpecialKey guifg=" . s:gui_darkgrey . "   ctermfg=" . s:ct_darkgrey
+exe "hi Folded     guifg=" . s:gui_darkgreen  . " guibg="   . s:gui_black     . " ctermfg=" . s:ct_darkgreen . " ctermbg=" . s:ct_black
+exe "hi SpecialKey guifg=" . s:gui_darkgrey   . " ctermfg=" . s:ct_darkgrey
+exe "hi Conceal    guifg=" . s:gui_darkgrey   . " ctermfg=" . s:ct_darkgrey   . " guibg=NONE ctermbg=NONE cterm=underline gui=underline"
+exe "hi Search     guibg=" . s:gui_darkgrey   . " ctermbg=" . s:ct_darkgrey   . " guifg=NONE ctermfg=NONE"
 
 hi link vimSynType Function
 hi clear Todo 
 hi link Todo Comment
 hi MatchParen   guibg=NONE    ctermbg=NONE cterm=underline,bold gui=underline,bold
 hi Underlined   guifg=NONE    ctermfg=NONE cterm=underline      gui=underline
-hi Search       guifg=NONE    ctermfg=NONE guibg=#232526        ctermbg=222
 
 " UI - menus
-exe "hi Pmenu guifg=" . s:gui_blue . " guibg=bg ctermfg=" . s:ct_blue . " ctermbg=bg"
-exe "hi PmenuSel guifg=bg guibg=" . s:gui_grey3 . " ctermfg=bg ctermbg=" . s:ct_grey3
-exe "hi PmenuSbar guibg=" . s:gui_black . "ctermbg=" . s:ct_black
-exe "hi PmenuThumb guifg=" . s:gui_lightblue . " ctermfg=" . s:ct_lightblue
-exe "hi WildMenu guifg=" . s:gui_lightblue . " guibg=bg ctermfg=" . s:ct_lightblue . "ctermbg=bg"
+exe "hi Pmenu      guifg="          . s:gui_blue      . " guibg=bg ctermfg="   . s:ct_blue      . " ctermbg=bg"
+exe "hi PmenuSel   guifg=bg guibg=" . s:gui_grey3     . " ctermfg=bg ctermbg=" . s:ct_grey3
+exe "hi PmenuSbar  guibg="          . s:gui_black     . " ctermbg="            . s:ct_black
+exe "hi PmenuThumb guifg="          . s:gui_lightblue . " ctermfg="            . s:ct_lightblue
+exe "hi WildMenu   guifg="          . s:gui_lightblue . " guibg=bg ctermfg="   . s:ct_lightblue . "ctermbg=bg"
+
+" UI - messages
+exe "hi Error      guibg=" . s:gui_red        . " ctermbg=" . s:ct_red    . " guifg=bg ctermfg=bg"
+exe "hi ErrorMsg   guifg=" . s:gui_red        . " ctermfg=" . s:ct_red    . " guibg=bg ctermbg=bg gui=bold cterm=bold"
+exe "hi WarningMsg guifg=" . s:gui_orange     . " ctermfg=" . s:ct_orange . " guibg=bg ctermbg=bg gui=bold cterm=bold"
+exe "hi Question   guifg=" . s:gui_lightblue  . " ctermfg=" . s:ct_lightblue
+exe "hi Title      guifg=" . s:gui_darkorange . " ctermfg=" . s:ct_darkorange
 
 " coc-nvim
 exe 'hi CocErrorHighlight guifg=' . s:gui_darkwhite . ' cterm=underline gui=underline'
-exe 'hi CocErrorSign guifg=' . s:gui_red . ' ctermfg=' . s:ct_red
-exe "hi CocWarningSign guifg=" . s:gui_orange . " ctermfg=" . s:ct_orange
-exe "hi CocInfoSign guifg=" . s:gui_yellow . " ctermfg=" . s:ct_yellow
-exe "hi CocHintSign guifg=" . s:gui_blue . " ctermfg=" . s:ct_blue
-exe "hi CocCodeLens guifg=" . s:gui_grey . " ctermfg=" . s:ct_grey
+exe 'hi CocErrorSign      guifg=' . s:gui_red .       ' ctermfg=' . s:ct_red
+exe 'hi CocWarningSign    guifg=' . s:gui_orange .    ' ctermfg=' . s:ct_orange
+exe 'hi CocInfoSign       guifg=' . s:gui_yellow .    ' ctermfg=' . s:ct_yellow
+exe 'hi CocHintSign       guifg=' . s:gui_blue .      ' ctermfg=' . s:ct_blue
+exe 'hi CocCodeLens       guifg=' . s:gui_grey .      ' ctermfg=' . s:ct_grey
 
 " UI - tab line
 hi TabLineFill          guifg=#808080 guibg=#1B1D1E               ctermfg=244  ctermbg=16
@@ -148,16 +156,6 @@ hi ModeMsg              guifg=#E6DB74                             ctermfg=229
 hi MoreMsg              guifg=#E6DB74                             ctermfg=229
 hi StatusLine           guifg=#455354 guibg=#dadada               ctermfg=238  ctermbg=253
 hi StatusLineNC         guifg=#808080 guibg=#080808               ctermfg=244  ctermbg=232
-
-" UI - messages
-hi Error                guifg=fg      guibg=#F92672               ctermfg=fg   ctermbg=197
-hi ErrorMsg             guifg=#F92672 guibg=bg      gui=bold      ctermfg=197  ctermbg=bg   cterm=bold
-hi WarningMsg           guifg=#FFDF5F guibg=bg      gui=bold      ctermfg=221  ctermbg=bg   cterm=bold
-hi Question             guifg=#66D9EF                             ctermfg=81
-hi Title                guifg=#FD971F                             ctermfg=208
-
-
-" Special cases
 
 " vimdiff - use consistent bg color to mark diffs and fg colour for add/remove/change state
 if has("diff")
