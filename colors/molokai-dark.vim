@@ -119,11 +119,11 @@ hi MatchParen   guibg=NONE    ctermbg=NONE cterm=underline,bold gui=underline,bo
 hi Underlined   guifg=NONE    ctermfg=NONE cterm=underline      gui=underline
 
 " UI - menus
-exe "hi Pmenu      guifg="          . s:gui_blue      . " guibg=bg ctermfg="   . s:ct_blue      . " ctermbg=bg"
-exe "hi PmenuSel   guifg=bg guibg=" . s:gui_grey3     . " ctermfg=bg ctermbg=" . s:ct_grey3
-exe "hi PmenuSbar  guibg="          . s:gui_black     . " ctermbg="            . s:ct_black
-exe "hi PmenuThumb guifg="          . s:gui_lightblue . " ctermfg="            . s:ct_lightblue
-exe "hi WildMenu   guifg="          . s:gui_lightblue . " guibg=bg ctermfg="   . s:ct_lightblue . "ctermbg=bg"
+exe "hi Pmenu      guifg=".s:gui_blue."  guibg=bg             ctermfg=".s:ct_blue. " ctermbg=bg"
+exe "hi PmenuSel   guifg=bg              guibg=".s:gui_blue." ctermfg=bg             ctermbg=".s:ct_blue
+exe "hi PmenuSbar  guifg=".s:gui_grey3." guibg=bg             ctermfg=".s:ct_grey3." ctermbg=bg"
+exe "hi PmenuThumb guifg=".s:gui_grey3." guibg=bg             ctermfg=".s:ct_grey3." ctermbg=bg"
+exe "hi WildMenu   guifg=".s:gui_blue."  guibg=bg             ctermfg=".s:ct_blue."  ctermbg=bg"
 
 " UI - messages
 exe "hi Error      guibg=" . s:gui_red        . " ctermbg=" . s:ct_red    . " guifg=bg ctermfg=bg"
@@ -133,12 +133,12 @@ exe "hi Question   guifg=" . s:gui_lightblue  . " ctermfg=" . s:ct_lightblue
 exe "hi Title      guifg=" . s:gui_darkorange . " ctermfg=" . s:ct_darkorange
 
 " coc-nvim
-exe 'hi CocErrorHighlight guifg=' . s:gui_darkwhite . ' cterm=underline gui=underline'
-exe 'hi CocErrorSign      guifg=' . s:gui_red .       ' ctermfg=' . s:ct_red
-exe 'hi CocWarningSign    guifg=' . s:gui_orange .    ' ctermfg=' . s:ct_orange
-exe 'hi CocInfoSign       guifg=' . s:gui_yellow .    ' ctermfg=' . s:ct_yellow
-exe 'hi CocHintSign       guifg=' . s:gui_blue .      ' ctermfg=' . s:ct_blue
-exe 'hi CocCodeLens       guifg=' . s:gui_grey .      ' ctermfg=' . s:ct_grey
+exe 'hi CocErrorHighlight guifg='.s:gui_darkwhite.' cterm=underline gui=underline'
+exe 'hi CocErrorSign      guifg='.s:gui_red.'       ctermfg='.s:ct_red
+exe 'hi CocWarningSign    guifg='.s:gui_orange.'    ctermfg='.s:ct_orange
+exe 'hi CocInfoSign       guifg='.s:gui_yellow.'    ctermfg='.s:ct_yellow
+exe 'hi CocHintSign       guifg='.s:gui_blue.'      ctermfg='.s:ct_blue
+exe 'hi CocCodeLens       guifg='.s:gui_grey.'      ctermfg='.s:ct_grey
 
 " UI - tab line
 hi TabLineFill          guifg=#808080 guibg=#1B1D1E               ctermfg=244  ctermbg=16
