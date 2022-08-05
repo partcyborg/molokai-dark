@@ -140,6 +140,12 @@ exe 'hi CocInfoSign       guifg='.s:gui_yellow.'    ctermfg='.s:ct_yellow
 exe 'hi CocHintSign       guifg='.s:gui_blue.'      ctermfg='.s:ct_blue
 exe 'hi CocCodeLens       guifg='.s:gui_grey.'      ctermfg='.s:ct_grey
 
+" diff
+exe 'hi GitGutterAdd          guifg='.s:gui_darkgrey.' ctermfg='.s:ct_darkgrey.' guibg=NONE ctermbg=NONE'
+exe 'hi GitGutterChange       guifg='.s:gui_darkgrey.' ctermfg='.s:ct_darkgrey.' guibg=NONE ctermbg=NONE'
+exe 'hi GitGutterDelete       guifg='.s:gui_darkgrey.' ctermfg='.s:ct_darkgrey.' guibg=NONE ctermbg=NONE'
+exe 'hi GitGutterChangeDelete guifg='.s:gui_darkgrey.' ctermfg='.s:ct_darkgrey.' guibg=NONE ctermbg=NONE'
+
 " UI - tab line
 hi TabLineFill          guifg=#808080 guibg=#1B1D1E               ctermfg=244  ctermbg=16
 hi TabLine              guifg=#808080 guibg=#1B1D1E gui=NONE      ctermfg=244  ctermbg=16   cterm=NONE
